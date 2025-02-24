@@ -4,7 +4,47 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-### 1. Install Dependencies
+### 1. Node.js Version Requirements
+
+To ensure smooth operation of your Next.js project, make sure you're using a compatible version of Node.js. The recommended versions for this project are:
+
+### Required Node.js Version:
+- **Node.js 20.x or higher**
+
+You can check your current Node.js version by running:
+
+```bash
+node -v
+```
+If you need to update your Node.js version, you can use [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm) to easily install and switch between different Node versions.
+
+### To install a specific version of Node.js using nvm:
+
+1. **Install nvm if it's not already installed:**
+
+```bash
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
+```
+
+2. **Install Node.js 20.x (or any version greater than or equal to 20):**
+```bash
+nvm install 20
+```
+
+3. **Or install the latest Node.js version (greater than 20):**
+```bash
+nvm install node
+```
+
+4. **Set the installed version as the default:**
+```bash
+nvm use version_installed  # or `nvm use node` for the latest
+```
+Replace `version_installed` with the node version intslled `>=20.x`
+
+This ensures your environment is set up correctly for the project and prevents any compatibility issues with dependencies that require specific versions of Node.js.
+
+### 2. Install Dependencies (After cloning the Repo)
 
 After setting up the project in your code editor, run the following commands to install the dependencies:
 
@@ -20,7 +60,7 @@ pnpm install
 bun install
 ```
 
-### 2. Run the Development Server
+### 3. Run the Development Server
 
 Start the development server with one of the following commands:
 
@@ -40,7 +80,7 @@ After running the development server, open http://localhost:3000 in your browser
 
 Once you have the project set up in your editor, follow the steps below for proper configuration.
 
-### 3. Setting Up the Project (Additional Setup)
+### 4. Setting Up the Project (Additional Setup)
 
 You can refer to the following resources for a more detailed project setup:
 
@@ -52,7 +92,7 @@ These documents will guide you through additional configuration steps, including
 
 ## Configuring Environment Variables
 
-### 4. Create the .env.local File
+### 5. Create the .env.local File
 
 Next, you'll need to create an environment configuration file:
 
@@ -64,7 +104,7 @@ GOOGLE_SHEET_ID=your_google_sheet_id_here
 DRIVE_FOLDER_ID=your_drive_folder_id_here
 ```
 
-### 5. Set the Correct Values
+### 6. Set the Correct Values
 **GOOGLE_SHEET_ID**: Replace `your_google_sheet_id_here` with the actual ID of your Google Sheet.
 
 **DRIVE_FOLDER_ID**: Replace `your_drive_folder_id_here` with the ID of the relevant folder in your Google Drive.
@@ -72,7 +112,7 @@ DRIVE_FOLDER_ID=your_drive_folder_id_here
 These values are critical for interacting with your Google Sheets and Drive Folder. You can obtain these IDs from the respective URLs of your Google Sheet and Drive Folder.
 
 ## Project Files Setup
-### 6. Add Project Setup Files
+### 7. Add Project Setup Files
 Once you have the necessary files downloaded from the links above, follow these steps:
 
 1. Copy the contents of the file downloaded from the **Project Setup Drive** to the `ceew.json` file located inside the `serviceFiles` folder in the root directory of the project.
@@ -81,7 +121,7 @@ Once you have the necessary files downloaded from the links above, follow these 
 
 These files are essential for the integration with Google Sheets and Drive, and the contents should match the configuration required for your project.
 
-### 7. Share Access with `client_email`
+### 8. Share Access with `client_email`
 
 To give the necessary access to the Google Sheet and Drive, follow these steps:
 
